@@ -1,0 +1,244 @@
+/*
+filename: styles.css
+authors: Dylan Glenister, Melusi Ndebele, Sam Glasser
+created: 03/08/2023
+last modified: 05/09/2023
+description: This is the singular stylesheet for the assignment website
+*/
+/* All selector */
+* {
+	font-family: Arial, Helvetica, sans-serif, system-ui;
+}
+/* A margin of 0 stops a white border from appearing around the page */
+body {
+	margin: 0;
+	background-color: #47382b;
+	min-width: 36em;
+}
+/* ===== Semantic elements ===== */
+/* A nice gradient for the header and footer */
+header, footer {
+	background: rgb(255,247,238);
+	background: linear-gradient(90deg, rgba(255,247,238,1) 0%, rgba(241,215,175,1) 50%, rgba(139,109,65,1) 75%, rgba(102,79,56,1) 100%);
+}
+/* A separate, more subtle gradient for the nav bar */
+nav {
+	background: rgb(255,231,199);
+	background: linear-gradient(90deg, rgba(255,231,199,1) 0%, rgba(214,181,137,1) 100%);
+}
+/* Both the navigation menu and the footer have a horizontal list of elements */
+nav, footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+/* How the elements will format themselves in their parent */
+nav a, footer p {
+	flex-grow: 1;
+	margin: 0 5px;
+	padding: 7px 3.8%;
+	text-align: center;
+	color: rgb(44, 32, 19);
+	font-size: 1.2em;
+}
+/* Extra formatting for the links */
+nav a {
+	/* background-color: #e7c597; */
+	text-decoration: none;
+	border: 1px solid #fff6e4;
+	border-radius: 20px;
+}
+nav a:first-child, nav a:last-child {
+	margin: 0;
+}
+/* To be clear that this is a button that can be pressed */
+nav a:hover {
+	background-color: #fff6e4;
+	transition: background-color 1s;
+}
+/* Since the whole page background was changed we need to make the main section white again */
+main {
+	padding: 20px;
+	background-color: #ffffff;
+}
+/* Giving the primary elements a border */
+header, nav, main, footer {
+	margin: 8px;
+	border: 5px solid #a8754c;
+	border-radius: 20px;
+}
+aside {
+	border: 4px inset #A07423 ;
+	border-radius: 14px;
+	margin: 2em;
+	padding: 1em;
+	float: right;
+	width: 25%;
+	box-shadow: 10px 10px 5px #aaaaaa;
+}
+section {
+	border: 2px solid #A88B55;
+	border-radius: 1em;
+	padding: 3px;
+}
+header {
+	padding: 20px;
+	display: flex;
+}
+header h1 {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	margin-top: 60px;
+	margin-left: 20px;
+}
+code {
+	font-family: monospace;
+	margin: 0;
+}
+pre {
+	margin: 0;
+}
+/* ===== Text elements ===== */
+h1, h2, h3, h4, h5, h6 {
+	margin: 5px 2px;
+}
+h1 {
+	font-size: 2.6em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.3em;
+}
+h5 {
+	font-size: 1.2em;
+}
+h6 {
+	font-size: 1em;
+}
+ol {
+	list-style-type:circle;
+}
+ul {
+	list-style-type:square;
+}
+a {
+	color: #70531c;
+}
+p {
+	margin: 10px 0;
+}
+table, th, td{
+	border: 1px solid black;
+	background-color: #c79b7a;
+	border-radius: 4px;
+	font-size: small;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	clear: both;
+	min-height: 50em;
+}
+dl {
+	float: left;
+	width: 20em;
+}
+dt{
+	float: left;
+	clear: left;
+}
+dd {
+	float: right;
+}
+figure {
+	float: right;
+	border: 5px double black;
+	border-radius: 8px;
+}
+figure img {
+	width: 400px;
+}
+section strong {
+	margin-left: 2em;
+}
+/* ===== Classes ===== */
+.solid {
+	border-style: solid;
+}
+.jobtitle {
+	color: #A07423;
+	margin-left: 1em;
+}
+.codeBlock {
+	width: fit-content;
+	padding: 10px;
+	background-color: #e6e6e6;
+	border: 2px solid #555555;
+	border-radius: 10px;
+}
+.work {
+	background-color: wheat;
+}
+.description {
+	margin-left: 2em;
+}
+.opening {
+	color: #A07423;
+	margin-left: 5px;
+}
+/* ===== IDs ===== */
+#logo {
+	height: 150px;
+}
+/* The main section of index.html will have a background image */
+#index {
+	/* Beans acquired from https://1.bp.blogspot.com/-bqCtt5cDSE0/XxohvnuopxI/AAAAAAAA10c/iZJK2sngUcoeS7h7Qg0ijD_R4phvuwj0QCLcBGAsYHQ/s2560/coffee_beans_beans_coffee_177761_3840x2160.jpg */
+	background-image: url(./images/beans.jpg);
+	background-size: 100%;
+}
+/* The article of index.html will not have a background image */
+#index article {
+	background-color: #ffffff;
+	background-image: none;
+	padding: 5px;
+	border-radius: 10px;
+	text-align: center;
+	background-color: #f0ddcd;
+}
+#index h2 {
+	font-size: 2em;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* ===== Animation ===== */
+/* Animation keyframes */
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	20% { opacity: 0; }
+	100% { opacity: 1; }
+}
+/* Fade in animation that scales in duration down the page */
+header {
+	animation: fadeIn 0.5s;
+}
+nav {
+	animation: fadeIn 1.2s;
+}
+main {
+	animation: fadeIn 1.9s;
+}
+footer {
+	animation: fadeIn 2.6s;
+}
+/* Dynamic layout */
+@media screen and (max-width: 45em) {
+	nav a, nav a:first-child, nav a:last-child {
+		margin: 0 5px;
+		padding: 10px 3.8%;
+		border: 5px solid #86684c;
+		border-radius: 15px;
+		font-size: 1.4em;
+	}
+}
