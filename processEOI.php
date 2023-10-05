@@ -9,7 +9,7 @@
 <?php
 	// Recieves all the form fields
 	include("formfields.php");
-	echo "<p>", $_POST, "</p>";
+	echo "<p>$given_names</p>";
 ?>
 </body>
 </html>
