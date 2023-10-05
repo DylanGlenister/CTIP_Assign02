@@ -32,7 +32,7 @@
 				<fieldset>
 					<legend>About you</legend>
 					<label for="first_name">First name: *</label>
-					<input type="text" name="first_name" id="first_name" size="40" required="required" pattern="[A-za-z\s]{1,20}">
+					<input type="text" name="first_name" id="first_name" size="40" required="required" pattern="[A-Za-z\s]{1,20}">
 					<br>
 					<label for="surname">Surname: *</label>
 					<input type="text" name="surname" id="surname" size="40" required="required" pattern="[A-Za-z\s]{1,20}">
