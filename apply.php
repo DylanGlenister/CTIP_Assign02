@@ -21,7 +21,7 @@
 	<!-- MAIN -->
 	<main>
 		<h2>Apply Here</h2>
-		<form method="post" action="./processEOI.php">
+		<form method="post" action="./processEOI.php" novalidate="novalidate">
 			<fieldset>
 				<legend>Application Form</legend>
 				<p>Fields marked with an <em>asterisk*</em> are <strong>required</strong></p>
