@@ -1,5 +1,5 @@
 <?php
-function sanatise_input($data) {
+function sanitise_input($data) {
 	$data = trim($data);
 	$data = stripslashes($data);
 	$data = htmlspecialchars($data);
@@ -9,20 +9,20 @@ function sanatise_input($data) {
 // Required
 // Validate that form data was sent over
 if (isset($_POST["jobrefnum"])){
-	$jobrefnum = sanatise_input($_POST["jobrefnum"]);
+	$jobrefnum = sanitise_input($_POST["jobrefnum"]);
 } else {
 	header("location: apply.php");
 }
-if (isset($_POST["given_names"])) sanatise_input($given_names = $_POST["given_names"]);
-if (isset($_POST["surname"])) sanatise_input($surname = $_POST["surname"]);
-if (isset($_POST["dob"])) sanatise_input($dob = $_POST["dob"]);
-if (isset($_POST["gender"])) sanatise_input($gender = $_POST["gender"]);
-if (isset($_POST["address"])) sanatise_input($address = $_POST["address"]);
-if (isset($_POST["town"])) sanatise_input($town = $_POST["town"]);
-if (isset($_POST["state"])) sanatise_input($state = $_POST["state"]);
-if (isset($_POST["postcode"])) sanatise_input($postcode = $_POST["postcode"]);
-if (isset($_POST["email"])) sanatise_input($email = $_POST["email"]);
-if (isset($_POST["phonenum"])) sanatise_input($phonenum = $_POST["phonenum"]);
+if (isset($_POST["given_names"])) sanitise_input($given_names = $_POST["given_names"]);
+if (isset($_POST["surname"])) sanitise_input($surname = $_POST["surname"]);
+if (isset($_POST["dob"])) sanitise_input($dob = $_POST["dob"]);
+if (isset($_POST["gender"])) sanitise_input($gender = $_POST["gender"]);
+if (isset($_POST["address"])) sanitise_input($address = $_POST["address"]);
+if (isset($_POST["town"])) sanitise_input($town = $_POST["town"]);
+if (isset($_POST["state"])) sanitise_input($state = $_POST["state"]);
+if (isset($_POST["postcode"])) sanitise_input($postcode = $_POST["postcode"]);
+if (isset($_POST["email"])) sanitise_input($email = $_POST["email"]);
+if (isset($_POST["phonenum"])) sanitise_input($phonenum = $_POST["phonenum"]);
 // Optional
 $skills = array();
 if (isset($_POST["computer_literacy"])) array_push($skills, "computer_literacy");
