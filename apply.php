@@ -31,10 +31,10 @@
 				<!-- ABOUT YOU -->
 				<fieldset>
 					<legend>About you</legend>
-					<label for="given_names">Given name: *</label>
-					<input type="text" name="given_names" id="given_names" size="40" required="required" pattern="[A-za-z\s]{1,20}">
+					<label for="first_name">First name: *</label>
+					<input type="text" name="first_name" id="first_name" size="40" required="required" pattern="[A-za-z\s]{1,20}">
 					<br>
-					<label for="surname">Surname name: *</label>
+					<label for="surname">Surname: *</label>
 					<input type="text" name="surname" id="surname" size="40" required="required" pattern="[A-Za-z\s]{1,20}">
 					<br>
 					<label for="dob">Date of Birth: *</label>

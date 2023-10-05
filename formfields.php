@@ -6,14 +6,14 @@ function sanitise_input($data) {
 	return $data;
 }
 
-// Required
 // Validate that form data was sent over
 if (isset($_POST["jobrefnum"])){
 	$jobrefnum = sanitise_input($_POST["jobrefnum"]);
 } else {
+	// Redirect to the apply page if the user attempts to directly access this page
 	header("location: apply.php");
 }
-if (isset($_POST["given_names"])) sanitise_input($given_names = $_POST["given_names"]);
+if (isset($_POST["first_name"])) sanitise_input($first_name = $_POST["first_name"]);
 if (isset($_POST["surname"])) sanitise_input($surname = $_POST["surname"]);
 if (isset($_POST["dob"])) sanitise_input($dob = $_POST["dob"]);
 if (isset($_POST["gender"])) sanitise_input($gender = $_POST["gender"]);
@@ -23,7 +23,7 @@ if (isset($_POST["state"])) sanitise_input($state = $_POST["state"]);
 if (isset($_POST["postcode"])) sanitise_input($postcode = $_POST["postcode"]);
 if (isset($_POST["email"])) sanitise_input($email = $_POST["email"]);
 if (isset($_POST["phonenum"])) sanitise_input($phonenum = $_POST["phonenum"]);
-// Optional
+// Optional skills
 $skills = array();
 if (isset($_POST["computer_literacy"])) array_push($skills, "computer_literacy");
 if (isset($_POST["problem_solving"])) array_push($skills, "problem_solving");
