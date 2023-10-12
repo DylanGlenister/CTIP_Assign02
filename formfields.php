@@ -33,5 +33,5 @@ if (isset($_POST["interpersonal"])) array_push($skills, "interpersonal");
 if (isset($_POST["learning"])) array_push($skills, "learning");
 if (isset($_POST["english_literacy"])) array_push($skills, "english_literacy");
 if (isset($_POST["mathematics"])) array_push($skills, "mathematics");
-if (isset($_POST["otherskills"])) array_push($skills, "otherskills");
+if (isset($_POST["otherskills"])) $otherskills = sanitise_input($_POST["otherskills"]);
 ?>
