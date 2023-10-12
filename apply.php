@@ -42,13 +42,13 @@
 					<br>
 					<fieldset>
 						<legend>Gender</legend>
-						<input type="radio" name="gender" id="male" required="required">
+						<input type="radio" name="gender" id="male" value="male" required="required">
 						<label for="male">Male </label>
 						<br>
-						<input type="radio" name="gender" id="female">
+						<input type="radio" name="gender" id="female" value="female">
 						<label for="female">Female </label>
 						<br>
-						<input type="radio" name="gender" id="neither">
+						<input type="radio" name="gender" id="neither" value="neither">
 						<label for="neither">Prefer not to say</label>
 					</fieldset>
 				</fieldset>
