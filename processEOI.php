@@ -9,7 +9,13 @@
 <?php
 	// Recieves all the form fields
 	include("formfields.php");
-	echo "<p>", $_POST, "</p>";
+	include("validate_input.php");
+
+	if ($errMsg != "") {
+		echo "$errMsg";
+	} else {
+		// Send to database
+	}
 ?>
 </body>
 </html>
