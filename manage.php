@@ -35,24 +35,67 @@
     <?php
         require_once "settings.php"
         $dbconn = @mysqli_connect($host, $user, $pwd, $sql_db)
-        if($dbconn){
-            if (isset($alleoi)){
-                $query = "SELECT * FROM ";
-                $result = mysqli_query($dbconn, $query)
-            }
-            else if (isset($refsearch)){
-                $query = "SELECT * FROM  
-                WHERE jobrefnumber = $refsearch";
-                $result = mysqli_query($dbconn, $query)
-                if (!$result){
-                    echo "<P>There is something wrong with the query.</p>"
+        if(!$dbconn){
+            echo "<p>Database connection failure.</p>";
+        } else if (isset($alleoi)){
+            $query = "SELECT * FROM ";
+            $result = mysqli_query($dbconn, $query)
+            if (!$result){
+                echo "<P>There is something wrong with", $query, "</p>";
+            } else {
+                echo "<table border=\"1\">\n";
+                echo "<tr>\n"
+                    ."<th scope=\"col\">RefNumber</th>\n"
+                    ."</tr>\n";
+
+                while ($row = mysqli_fetch_assoc($result)){
+                    echo "<tr>\n";
+                    echo "<td>",$row["jobrefnumber"],"</td>\n";
+                    echo "</tr>\n";
                 }
+                echo "</table>";
+                mysqli_free_result($result);
             }
-            else if (isset($namesearch)){
-                $query = "SELECT * FROM  
-                WHERE given_names = $given_namesearch OR surname = $surnamesearch";
+        } else if (isset($refsearch)){
+            $query = "SELECT * FROM WHERE jobrefnumber = $refsearch";
+            $result = mysqli_query($dbconn, $query)
+            if (!$result){
+                echo "<P>There is something wrong with", $query, "</p>";
+            } else {
+                echo "<table border=\"1\">\n";
+                echo "<tr>\n"
+                    ."<th scope=\"col\">RefNumber</th>\n"
+                    ."</tr>\n";
+
+                while ($row = mysqli_fetch_assoc($result)){
+                    echo "<tr>\n";
+                    echo "<td>",$row["jobrefnumber"],"</td>\n";
+                    echo "</tr>\n";
+                }
+                echo "</table>";
+                mysqli_free_result($result);
+            }
+        } else if (isset($namesearch)){
+            $query = "SELECT * FROM WHERE given_names = $given_namesearch OR surname = $surnamesearch";
+            $result = mysqli_query($dbconn, $query)
+            if (!$result){
+                echo "<P>There is something wrong with", $query, "</p>";
+            } else {
+                echo "<table border=\"1\">\n";
+                echo "<tr>\n"
+                    ."<th scope=\"col\">RefNumber</th>\n"
+                    ."</tr>\n";
+
+                while ($row = mysqli_fetch_assoc($result)){
+                    echo "<tr>\n";
+                    echo "<td>",$row["jobrefnumber"],"</td>\n";
+                    echo "</tr>\n";
+                }
+                echo "</table>";
+                mysqli_free_result($result);
             }
         }
+
     ?>
     </main>
     <?php
