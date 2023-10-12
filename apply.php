@@ -82,7 +82,7 @@
 					<input type="text" name="postcode" id="postcode" size="5" required="required" pattern="\d{4}">
 					<br>
 					<label for="email">Email address: *</label>
-					<input type="email" name="email" id="email" size="30" required="required">
+					<input type="email" name="email" id="email" size="30" required="required" pattern="*{1,40}">
 					<br>
 					<label for="phonenum">Phone number: *</label>
 					<input type="text" name="phonenum" id="phonenum" size="10" required="required" pattern="[\d\s]{8,12}">
