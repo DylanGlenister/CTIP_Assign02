@@ -13,16 +13,16 @@ if (isset($_POST["jobrefnum"])){
 	// Redirect to the apply page if the user attempts to directly access this page
 	header("location: apply.php");
 }
-if (isset($_POST["first_name"])) sanitise_input($first_name = $_POST["first_name"]);
-if (isset($_POST["surname"])) sanitise_input($surname = $_POST["surname"]);
-if (isset($_POST["dob"])) sanitise_input($dob = $_POST["dob"]);
-if (isset($_POST["gender"])) sanitise_input($gender = $_POST["gender"]);
-if (isset($_POST["address"])) sanitise_input($address = $_POST["address"]);
-if (isset($_POST["town"])) sanitise_input($town = $_POST["town"]);
-if (isset($_POST["state"])) sanitise_input($state = $_POST["state"]);
-if (isset($_POST["postcode"])) sanitise_input($postcode = $_POST["postcode"]);
-if (isset($_POST["email"])) sanitise_input($email = $_POST["email"]);
-if (isset($_POST["phonenum"])) sanitise_input($phonenum = $_POST["phonenum"]);
+if (isset($_POST["first_name"])) $first_name = sanitise_input($_POST["first_name"]);
+if (isset($_POST["surname"])) $surname = sanitise_input($_POST["surname"]);
+if (isset($_POST["dob"])) $dob = sanitise_input($_POST["dob"]);
+if (isset($_POST["gender"])) $gender = sanitise_input($_POST["gender"]);
+if (isset($_POST["address"])) $address = sanitise_input($_POST["address"]);
+if (isset($_POST["town"])) $town = sanitise_input($_POST["town"]);
+if (isset($_POST["state"])) $state = sanitise_input($_POST["state"]);
+if (isset($_POST["postcode"])) $postcode = sanitise_input($_POST["postcode"]);
+if (isset($_POST["email"])) $email = sanitise_input($_POST["email"]);
+if (isset($_POST["phonenum"])) $phonenum = sanitise_input($_POST["phonenum"]);
 // Optional skills
 $skills = array();
 if (isset($_POST["computer_literacy"])) array_push($skills, "computer_literacy");
