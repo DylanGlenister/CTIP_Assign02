@@ -32,6 +32,8 @@
         <input type="submit" value="Search">
     </form>
 
+    <br>
+
     <?php
         require_once "settings.php"
         $dbconn = @mysqli_connect($host, $user, $pwd, $sql_db)
