@@ -16,7 +16,11 @@ if (isset($_POST["jobrefnum"])){
 if (isset($_POST["first_name"])) $first_name = sanitise_input($_POST["first_name"]);
 if (isset($_POST["surname"])) $surname = sanitise_input($_POST["surname"]);
 if (isset($_POST["dob"])) $dob = sanitise_input($_POST["dob"]);
-if (isset($_POST["gender"])) $gender = sanitise_input($_POST["gender"]);
+if (isset($_POST["gender"])) {
+	$gender = sanitise_input($_POST["gender"]);
+} else {
+	$gender = "";
+}
 if (isset($_POST["address"])) $address = sanitise_input($_POST["address"]);
 if (isset($_POST["town"])) $town = sanitise_input($_POST["town"]);
 if (isset($_POST["state"])) $state = sanitise_input($_POST["state"]);

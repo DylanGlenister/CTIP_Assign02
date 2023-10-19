@@ -26,19 +26,21 @@ if ($dob == "") {
 }
 
 // Gender
-
+if ($gender == "") {
+	$errMsg .= "<p>Please select an option for gender.</p>";
+}
 
 // Street address
 if ($address == "") {
 	$errMsg .= "<p>You must enter your street address.</p>";
-} else if (preg_match("/^.{1,40}$/u", $address)) {
+} else if (!preg_match("/^.{1,40}$/u", $address)) {
 	$errMsg .= "<p>A maximum of 40 characters are allowed in your street address.</p>";
 }
 
 // Suburb/town
 if ($town == "") {
 	$errMsg .= "<p>You must enter your suburb/town.</p>";
-} else if (preg_match("/^.{1,40}$/u", $address)) {
+} else if (!preg_match("/^.{1,40}$/u", $address)) {
 	$errMsg .= "<p>A maximum of 40 characters are allowed in your suburb/town.</p>";
 }
 
