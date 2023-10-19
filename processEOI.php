@@ -58,25 +58,35 @@
 		echo "otherskills: $otherskills";
 		echo "</p>";
 
-		// Send to database
+		// Open connection to database
 		$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
-
-		# Create the table if it does not exist
-		$table_exists = mysqli_query($conn, "SELECT 1 FROM $sql_table LIMIT 1");
-		if (!$table_exists) {
-			$make_table = "CREATE TABLE `$sql_db`.`$sql_table` (`id` INT NOT NULL AUTO_INCREMENT , `jobrefnum` CHAR(5) NOT NULL , `first_name` VARCHAR(20) NOT NULL , `surname` VARCHAR(20) NOT NULL , `dob` DATE NOT NULL , `gender` VARCHAR(7) NOT NULL , `address` VARCHAR(40) NOT NULL , `town` VARCHAR(40) NOT NULL , `state` CHAR(3) NOT NULL , `postcode` CHAR(4) NOT NULL , `email` VARCHAR(40) NOT NULL , `phonenum` VARCHAR(12) NOT NULL , `skills` VARCHAR(108) NULL , `otherskills` TEXT NULL , `status` ENUM('new','current','final') NOT NULL DEFAULT 'new', PRIMARY KEY (`id`)) ENGINE = InnoDB;";
-			mysqli_query($conn, $make_table);
-			echo "<p>Table did not exist and was created</p>";
-		}
 
 		if (!$conn) {
 			echo "<p>Database connection failure</p>";
 		} else {
+			// Create the table if it does not exist
+			$table_exists = mysqli_query($conn, "SELECT 1 FROM $sql_table LIMIT 1");
+			if (!$table_exists) {
+				$make_table = "CREATE TABLE `$sql_db`.`$sql_table` (`id` INT NOT NULL AUTO_INCREMENT , `jobrefnum` CHAR(5) NOT NULL , `first_name` VARCHAR(20) NOT NULL , `surname` VARCHAR(20) NOT NULL , `dob` DATE NOT NULL , `gender` VARCHAR(7) NOT NULL , `address` VARCHAR(40) NOT NULL , `town` VARCHAR(40) NOT NULL , `state` CHAR(3) NOT NULL , `postcode` CHAR(4) NOT NULL , `email` VARCHAR(40) NOT NULL , `phonenum` VARCHAR(12) NOT NULL , `skills` VARCHAR(108) NULL , `otherskills` TEXT NULL , `status` ENUM('new','current','final') NOT NULL DEFAULT 'new', PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+				mysqli_query($conn, $make_table);
+				echo "<p>Table did not exist and was created</p>";
+			}
+
+			// Insert the new data into the table
 			$skillstr = array_to_string($skills);
 			$query = "INSERT INTO $sql_table (jobrefnum, first_name, surname, dob, gender, address, town, state, postcode, email, phonenum, skills, otherskills) VALUES ('$jobrefnum', '$first_name', '$surname', '$dob' ,'$gender', '$address', '$town', '$state', '$postcode', '$email', '$phonenum', '$skillstr', '$otherskills')";
 			echo "<p>Query: $query</p>";
 			echo "<p>Skillstr: $skillstr</p>";
 			$result = mysqli_query($conn, $query);
+
+			if (!$result) {
+				echo "<p>The sql query failed to submit for some reason.\n$query</p>";
+			} else {
+				// Somehow we need to get the id number
+				$id = mysqli_insert_id($conn);
+				echo "<p>Your application has been successfully submitted!<br>";
+				echo "Your unique application id is: $id</p>";
+			}
 			mysqli_close($conn);
 		}
 	}
