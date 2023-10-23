@@ -212,6 +212,20 @@ section strong {
 	font-size: 2em;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+#eoi table, #eoi th, #eoi td {
+	border: 1px solid black;
+	background-color: #FFFFFF;
+	border-radius: 1px;
+	font-size: 1em;
+	margin-left: 5%;
+	margin-right: 0;
+	text-align: left;
+	clear: none;
+	min-height: 0;
+}
+#eoi th, #eoi td {
+	max-width: 30em;
+}
 /* ===== Animation ===== */
 /* Animation keyframes */
 @keyframes fadeIn {
