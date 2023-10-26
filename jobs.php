@@ -9,13 +9,11 @@
 	<link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-<?php
+	<?php
 		$title = "Jobs";
 		include ("header.inc");
-		?>
-	<?php
 		include ("menu.inc");
-		?>
+	?>
 	<main>
 		<h2 class="opening">
 			Here is a list of our available positions:
@@ -99,6 +97,6 @@
 	<?php
 		$author = "Author: Sam Glasser";
 		include ("footer.inc");
-		?>
+	?>
 </body>
 </html>

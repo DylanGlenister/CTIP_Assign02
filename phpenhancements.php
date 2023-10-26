@@ -12,8 +12,6 @@
 <?php
 		$title = "PHP Enhancements";
 		include ("header.inc");
-		?>
-	<?php
 		include ("menu.inc");
 		?>
 	<main>
