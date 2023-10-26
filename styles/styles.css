@@ -214,8 +214,8 @@ section strong {
 }
 #eoi table, #eoi th, #eoi td {
 	border: 1px solid black;
-	background-color: #FFFFFF;
-	border-radius: 1px;
+	background-color: #c79b7a;
+	border-radius: 3px;
 	font-size: 1em;
 	margin-left: 5%;
 	margin-right: 0;
@@ -224,6 +224,7 @@ section strong {
 	min-height: 0;
 }
 #eoi th, #eoi td {
+	background-color: wheat;
 	max-width: 30em;
 }
 /* ===== Animation ===== */
