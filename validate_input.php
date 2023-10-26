@@ -1,10 +1,35 @@
 <?php
+
+require_once ("settings.php");
+
+	$conn = mysqli_connect($host,
+	$user,
+	$pwd,
+	$sql_db
+);
+if (!$conn) {
+	echo "<p>Database connection Failure</p>";
+}
+else {
+	$sql_tables="eoi";
+	
+	$Query = "SELECT * FROM applications WHERE jobrefnum LIKE '$jobrefnum' AND email LIKE '$email' ";
+
+	$result = mysqli_query($conn, $Query);
+
+	if (!$result) {
+		echo "<p> You Have Already Applied for This Position";
+	}
+}
+
+
 // Validate all the inputs
 $errMsg = "";
 // Job reference number
 if (!preg_match("/[\w\d]{5}$/", $jobrefnum)) {
 	$errMsg .= "<p>Job reference number must be exactly 5 alphanumeric characters.</p>";
 }
+
 
 // First name
 if ($first_name == "") {
