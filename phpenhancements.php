@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Mocha - Enhancements</title>
+	<title>Mocha - PHP Enhancements</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Dylan Glenister">
 	<meta name="description" content="The php enhancements page for a fictional tech company called Mocha">
@@ -15,15 +15,20 @@
 		include ("menu.inc");
 		?>
 	<main>
-		<!-- Enhancement 1 -->
+		<!-- Accounts -->
 		<section>
-			<h2>Enhancement 1</h2>
-			<p>Information<br>
+			<h2>Accounts</h2>
+			<p>You can make an admin account at <a href="./signup.php">signup.php</a> and then login at <a href="./login.php">login.php</a> to manage EOIs.</p>
 		</section>
 		<br>
-		<!-- Enhancement 2 -->
+		<!-- Sorting EOIs -->
 		<section>
-			<h2>Enhancement 2</h2>
+			<h2>Sorting EOIs</h2>
+			<p>Information</p>
+		</section>
+		<!-- Resubmission Checking -->
+		<section>
+			<h2>Resubmission Checking</h2>
 			<p>Information</p>
 		</section>
 	</main>
