@@ -19,12 +19,16 @@
 		<section>
 			<h2>Accounts</h2>
 			<p>You can make an admin account at <a href="./signup.php">signup.php</a> and then login at <a href="./login.php">login.php</a> to manage EOIs.</p>
+			<p>The account is stored in the sql database in a separate table called admins. The password is stored as plaintext not for a lack of consideration for security but because the functions to implement hashing don't work on the version of php used on the mercury server (see: <a href="https://www.php.net/manual/en/function.password-hash.php">password</a>)</p>
 		</section>
 		<br>
 		<!-- Sorting EOIs -->
 		<section>
 			<h2>Sorting EOIs</h2>
-			<p>Information</p>
+			<p>You can select which column is used to order the query table in the<a href="./manage.php">manage.php</a>page.
+			When searching for the query, you select a header, from a drop down menu, that will order the entire table in relation to that column.
+			A switch/case statement checks the selected option from the drop down and compares it to the name of each column.
+			If they are equal then a query that orders the table by the corresponding column will be used.</p>
 		</section>
 		<!-- Resubmission Checking -->
 		<section>
