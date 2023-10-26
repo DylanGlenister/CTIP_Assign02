@@ -1,4 +1,6 @@
 <?php
+// Validate all the Inputs
+$errMsg = "";
 
 require_once ("settings.php");
 
@@ -11,20 +13,16 @@ if (!$conn) {
 	echo "<p>Database connection Failure</p>";
 }
 else {
-	$sql_tables="eoi";
-	
-	$Query = "SELECT * FROM applications WHERE jobrefnum LIKE '$jobrefnum' AND email LIKE '$email' ";
+	$Query = "SELECT * FROM eoi WHERE jobrefnum LIKE '$jobrefnum' AND email LIKE '$email' ";
 
 	$result = mysqli_query($conn, $Query);
-
-	if (!$result) {
-		echo "<p> You Have Already Applied for This Position";
+	if ($result) {
+		if (mysqli_num_rows($result) > 0) {
+			$errMsg .= "<p>You have Already Applied for This Position.</p>";
+		}
 	}
 }
 
-
-// Validate all the inputs
-$errMsg = "";
 // Job reference number
 if (!preg_match("/[\w\d]{5}$/", $jobrefnum)) {
 	$errMsg .= "<p>Job reference number must be exactly 5 alphanumeric characters.</p>";
