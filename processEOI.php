@@ -47,7 +47,6 @@
 	include("validate_input.php");
 	include_once("settings.php");
 
-
 	if ($errMsg != "") {
 		echo "$errMsg";
 	} else {
@@ -112,8 +111,8 @@
 	}
 	echo "</main>";
 	// FOOTER
-		$author = "Author: Dylan Glenister";
-		include ("footer.inc");
+	$author = "Author: Dylan Glenister";
+	include ("footer.inc");
 ?>
 </body>
 </html>
