@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    
+
     <?php
     $title = "Update EOI Status";
     include ("header.inc");
@@ -33,7 +33,7 @@
         mysqli_close($dbconn);
     }
     ?>
-    <p>Return to <a href="./manage.php">manage EOI</a> page.</p>
+    <p>Return to <a href="./manage.php?verified=yes">manage EOI</a> page.</p>
     </main>
     <?php
 		$author = "Melusi Ndebele";
