@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Mocha - Delete EOI</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Melusi Ndebele">
+	<meta name="description" content="The delete EOI page for a fictional tech company called Mocha">
+	<meta name="keywords" content="Swinburne, COS10026, assignment, Mocha, manage, EOI, Quiery, Delete">
 	<link rel="stylesheet" href="./styles/styles.css">
-
 </head>
 <body>
     <?php 

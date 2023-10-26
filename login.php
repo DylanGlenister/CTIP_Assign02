@@ -3,8 +3,8 @@
 <head>
 	<title>Login</title>
 	<meta name="author" content="Dylan Glenister">
-	<meta name="description" content="">
-	<meta name="keywords" content="Swinburne, COS10026, assignment, Mocha">
+	<meta name="description" content="The login page for managers for a fictional tech company called Mocha">
+	<meta name="keywords" content="Swinburne, COS10026, assignment, Mocha, login">
 	<link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
