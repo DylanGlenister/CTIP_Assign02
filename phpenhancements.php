@@ -19,7 +19,7 @@
 		<section>
 			<h2>Accounts</h2>
 			<p>You can make an admin account at <a href="./signup.php">signup.php</a> and then login at <a href="./login.php">login.php</a> to manage EOIs.</p>
-			<p>The account is stored in the sql database in a separate table called admins. The password is stored as plaintext not for a lack of consideration for security but because the functions to implement hashing don't work on the version of php used on the mercury server (see: <a href="https://www.php.net/manual/en/function.password-hash.php">password</a>)</p>
+			<p>The account is stored in the sql database in a separate table called admins. The password is stored as plaintext not for a lack of consideration for security but because the functions to implement hashing don't work on the version of php used on the mercury server (see: <a href="https://www.php.net/manual/en/function.password-hash.php">password_hash()</a>)</p>
 		</section>
 		<br>
 		<!-- Sorting EOIs -->
