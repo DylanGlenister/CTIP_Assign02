@@ -12,7 +12,8 @@
     <?php
 		$title = "EOI Queries";
 		include ("header.inc");
-	?>
+		include ("menu.inc");
+    ?>
     <main>
         <h1>Search for EOI Queries</h1>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -138,5 +139,5 @@
     <?php
 		$author = "Melusi Ndebele";
 		include ("footer.inc");
-		?>
+	?>
 </body>
