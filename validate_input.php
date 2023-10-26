@@ -13,12 +13,15 @@ if (!$conn) {
 else {
 	$sql_tables="eoi";
 	
-	$Query = "SELECT * FROM applications WHERE jobrefnum LIKE '$jobrefnum' AND email LIKE '$email' ";
+	$Query = "SELECT * FROM eoi WHERE jobrefnum LIKE '$jobrefnum' AND email LIKE '$email' ";
 
 	$result = mysqli_query($conn, $Query);
 
 	if (!$result) {
 		echo "<p> You Have Already Applied for This Position";
+	}
+	else {
+		echo "<p> Successfully submited new application";
 	}
 }
 
