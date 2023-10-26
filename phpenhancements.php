@@ -9,11 +9,11 @@
 	<link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-<?php
+	<?php
 		$title = "PHP Enhancements";
 		include ("header.inc");
 		include ("menu.inc");
-		?>
+	?>
 	<main>
 		<!-- Accounts -->
 		<section>
@@ -45,6 +45,6 @@
 	<?php
 		$author = "Author: Dylan, Melusi, Sam";
 		include ("footer.inc");
-		?>
+	?>
 </body>
 </html>
