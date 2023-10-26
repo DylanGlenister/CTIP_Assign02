@@ -36,6 +36,7 @@
 			<label for='password'>Password: </label>
 			<input type='text' name='password' id='password' value=''>
 			<br><br>
+			<p>Username is 'admin', password is 'admin'</p>
 			<input type='submit' value='Login'>
 			<input type='reset' value='clear'>
 			</fieldset>

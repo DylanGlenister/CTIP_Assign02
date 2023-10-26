@@ -39,7 +39,6 @@
 			<label for='confpass'>Confirm password: </label>
 			<input type='text' name='confpass' id='confpass' value=''>
 			<br>";
-		echo "<p>Username is 'admin', password is 'admin'</p>";
 		$passmatch = isset($_GET["passmatch"]);
 		if ($passmatch && $passmatch == "false") {
 			echo "Passwords must match!";
