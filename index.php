@@ -20,7 +20,10 @@
 			<h3>We do IT work for you!</h3>
 			<p>Mocha is available for you to outsource your work. We cover all your bases.</p>
 			<p>Down on manpower? Running out of time? Don't want to pay your employees? Hire us!</p>
-			<p><a href="https://youtu.be/wfd4XQ1-fVs">Short group video on Youtube</a></p>
+			<p>
+				<a href="https://youtu.be/wfd4XQ1-fVs">Part 1 on Youtube</a>
+				<a href="https://youtu.be/hikD0nhzYo4">Part 2 on Youtube</a>
+			</p>
 		</article>
 	</main>
 	<?php
