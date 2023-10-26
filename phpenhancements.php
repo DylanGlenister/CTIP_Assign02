@@ -29,7 +29,12 @@
 		<!-- Resubmission Checking -->
 		<section>
 			<h2>Resubmission Checking</h2>
-			<p>Information</p>
+			<p>For the resubmission checking enhancement, we wanted to make sure no one was able to apply for the same position multiple times</p>
+			<p>The way I chose to do it was to search the MySQL database for the job reference number and the email they submitted
+				and it simply checks to see if anything comes back in the search. If there is something returned then it means there are copies and they are attempting to re-apply
+				for the same position. If there is a match it simply goes into an ErrMsg which tells the user that they have already applied for this position.
+				It is a simple enhancement but it stops people from bombarding the apply page and the database with duplicates. 
+			</p>
 		</section>
 	</main>
 	<?php
