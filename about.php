@@ -9,13 +9,11 @@
 	<link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-<?php
+	<?php
 		$title = "About";
 		include ("header.inc");
-		?>
-	<?php
 		include ("menu.inc");
-		?>
+	?>
 	<main>
 		<h1>About our group</h1>
 		<dl>
@@ -149,6 +147,6 @@
 	<?php
 		$author = "Author: Melusi Ndebele";
 		include ("footer.inc");
-		?>
+	?>
 </body>
 </html>

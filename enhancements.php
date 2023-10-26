@@ -9,13 +9,11 @@
 	<link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-<?php
+	<?php
 		$title = "Enhancements";
 		include ("header.inc");
-		?>
-	<?php
 		include ("menu.inc");
-		?>
+	?>
 	<main>
 		<!-- Fade In -->
 		<section>
@@ -75,6 +73,6 @@
 	<?php
 		$author = "Author: Dylan Glenister";
 		include ("footer.inc");
-		?>
+	?>
 </body>
 </html>

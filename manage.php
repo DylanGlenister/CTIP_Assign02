@@ -12,7 +12,8 @@
     <?php
 		$title = "EOI Queries";
 		include ("header.inc");
-	?>
+		include ("menu.inc");
+    ?>
     <main>
         <h1>Search for Applications</h1>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -41,11 +42,11 @@
                 <option value="stat">Status</option>
             </select>
             <input type="submit" value="Search">
-        </fieldset> 
+        </fieldset>
     </form>
 
     <br>
-    
+
 
     <?php
 
@@ -212,6 +213,13 @@
                     display_data($result);
                 }
                 mysqli_close($dbconn);
+            }
+        } elseif ($_SERVER["REQUEST_METHOD"] != "GET") {
+            header("location: index.php");
+        } else {
+            $verified = isset($_GET["verified"]);
+            if (!$verified || $verified != "true") {
+                header("location: index.php");
             }
         }
 

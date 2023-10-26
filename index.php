@@ -12,12 +12,8 @@
 	<?php
 		$title = "Homepage";
 		include ("header.inc");
-		?>
-
-	<?php
 		include ("menu.inc");
-		?>
-
+	?>
 	<main id="index">
 		<article>
 			<h2>HELLO WE ARE MOCHA</h2>
@@ -30,7 +26,6 @@
 	<?php
 		$author = "Author: Dylan, Melusi, Sam";
 		include ("footer.inc");
-		?>
-		
+	?>
 </body>
 </html>
