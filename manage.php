@@ -132,6 +132,13 @@
                 }
                 mysqli_close($dbconn);
             }
+        } elseif ($_SERVER["REQUEST_METHOD"] != "GET") {
+            header("location: index.php");
+        } else {
+            $verified = isset($_GET["verified"]);
+            if (!$verified || $verified != "true") {
+                header("location: index.php");
+            }
         }
 
     ?>

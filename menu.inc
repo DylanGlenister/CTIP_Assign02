@@ -5,5 +5,5 @@
 	<a href="./apply.php">Apply</a>
 	<a href="./enhancements.php">Enhancements</a>
 	<a href="./phpenhancements.php">PHP Enhancements</a>
-	<a href="./manage.php">Manage</a>
+	<a href="./login.php">Admin</a>
 </nav>
