@@ -79,34 +79,34 @@ if (!$conn) {
 	switch ($number) {
 		case "0":
 			if ($state != "NT")
-			echo "Postcode does not match State";
+			$errMsg .= "Postcode does not match State";
 			break;
 		case "2":
 			if ($state != "NSW")
-			echo "Postcode does not match State";
+			$errMsg .= "Postcode does not match State";
 			break;
 		case "3";
 			if ($state != "VIC")
-			echo "Postcode does not match State";
+			$errMsg .= "Postcode does not match State";
 			break;
 		case "4";
 			if ($state != "QLD")
-			echo "Postcode does not match State";
+			$errMsg .= "Postcode does not match State";
 			break;
 		case "5";
 			if ($state != "SA")
-			echo "Postcode does not match State";
+			$errMsg .= "Postcode does not match State";
 			break;
 		case "6";
 			if ($state != "WA")
-			echo "Postcode does not match State";
+			$errMsg .= "Postcode does not match State";
 			break;
 		case "7";
 			if ($state != "TAS")
-			echo "Postcode does not match State";
+			$errMsg .= "Postcode does not match State";
 			break;
 		default:
-			echo "Postcode does not match State";
+			$errMsg .= "Postcode does not match State";
 	}
 
 	// Email address
