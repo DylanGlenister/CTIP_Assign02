@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="./styles/styles.css">
 
 </head>
 <body>
     <?php 
+    $title = "Delete EOI";
+    include ("header.inc");
+    ?>
+    <main>
+    <?php
     require_once ("settings.php");
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -19,14 +25,19 @@
             $query = "DELETE FROM $sql_table WHERE jobrefnum = '$_GET[ref]'";
             $result = mysqli_query ($conn,$query);
             if ($result)  { 
-                echo "<p>Deleted ".mysqli_affected_rows($conn)." record(s).</p>";
+                echo "<h2>Deleted ".mysqli_affected_rows($conn)." record(s).</h2>";
             } else {
-                echo "<p>Insert operation unsuccessful.</p>"; 
+                echo "<h2>Insert operation unsuccessful.</h2>"; 
             }
             mysqli_close ($conn);
-        } else {echo "<p>Unable to connect to the db.</p>";}
+        } else {echo "<h2>Unable to connect to the db.</h2>";}
     }
     ?>
     <p>Return to <a href="./manage.php">manage EOI</a> page.</p>
-
+    </main>
+    <?php
+		$author = "Melusi Ndebele";
+		include ("footer.inc");
+		?>
 </body>
+</html>

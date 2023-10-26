@@ -4,4 +4,5 @@
 	$pwd = "mochagroup";
 	$sql_db = "s104875370_db";
 	$sql_table = "eoi";
+	$account_table = "admins";
 ?>

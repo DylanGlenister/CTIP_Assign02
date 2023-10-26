@@ -13,11 +13,8 @@
 	<?php
 		$title = "Apply";
 		include ("header.inc");
-		?>
-	<!-- NAV -->
-	<?php
 		include ("menu.inc");
-		?>
+	?>
 	<!-- MAIN -->
 	<main>
 		<h2>Apply Here</h2>
@@ -130,6 +127,6 @@
 	<?php
 		$author = "Author: Dylan Glenister";
 		include ("footer.inc");
-		?>
+	?>
 </body>
 </html>

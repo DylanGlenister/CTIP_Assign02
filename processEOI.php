@@ -70,22 +70,24 @@
 					}
 				}
 
-				// Insert the new data into the table
-				$skillstr = array_to_string($skills);
-				$query = "INSERT INTO $sql_table (jobrefnum, first_name, surname, dob, gender, address, town, state, postcode, email, phonenum, skills, otherskills) VALUES ('$jobrefnum', '$first_name', '$surname', '$dob' ,'$gender', '$address', '$town', '$state', '$postcode', '$email', '$phonenum', '$skillstr', '$otherskills')";
-				//echo "<p>Query: $query</p>";
-				//echo "<p>Skillstr: $skillstr</p>";
-				$result = mysqli_query($conn, $query);
+				if ($table_exists || $make_table) {
+					// Insert the new data into the table
+					$skillstr = array_to_string($skills);
+					$query = "INSERT INTO $sql_table (jobrefnum, first_name, surname, dob, gender, address, town, state, postcode, email, phonenum, skills, otherskills) VALUES ('$jobrefnum', '$first_name', '$surname', '$dob' ,'$gender', '$address', '$town', '$state', '$postcode', '$email', '$phonenum', '$skillstr', '$otherskills')";
+					//echo "<p>Query: $query</p>";
+					//echo "<p>Skillstr: $skillstr</p>";
+					$result = mysqli_query($conn, $query);
 
-				if (!$result) {
-					echo "<h3>The sql query failed to submit for some reason.\n$query</h3>";
-				} else {
-					// Somehow we need to get the id number
-					$id = mysqli_insert_id($conn);
-					echo "<h4>Your application has been successfully submitted!</h4>";
-					echo "<p>Your unique application id is: $id</p>";
+					if (!$result) {
+						echo "<h3>The sql query failed to submit for some reason.\n$query</h3>";
+					} else {
+						// Somehow we need to get the id number
+						$id = mysqli_insert_id($conn);
+						echo "<h4>Your application has been successfully submitted!</h4>";
+						echo "<p>Your unique application id is: $id</p>";
+					}
+					mysqli_close($conn);
 				}
-				mysqli_close($conn);
 			}
 		}
 
