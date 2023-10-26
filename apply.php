@@ -42,13 +42,13 @@
 					<br>
 					<fieldset>
 						<legend>Gender</legend>
-						<input type="radio" name="gender" id="male" required="required">
+						<input type="radio" name="gender" id="male" value="male" required="required">
 						<label for="male">Male </label>
 						<br>
-						<input type="radio" name="gender" id="female">
+						<input type="radio" name="gender" id="female" value="female">
 						<label for="female">Female </label>
 						<br>
-						<input type="radio" name="gender" id="neither">
+						<input type="radio" name="gender" id="neither" value="neither">
 						<label for="neither">Prefer not to say</label>
 					</fieldset>
 				</fieldset>
@@ -82,7 +82,7 @@
 					<input type="text" name="postcode" id="postcode" size="5" required="required" pattern="\d{4}">
 					<br>
 					<label for="email">Email address: *</label>
-					<input type="email" name="email" id="email" size="30" required="required">
+					<input type="email" name="email" id="email" size="30" required="required" pattern="*{1,40}">
 					<br>
 					<label for="phonenum">Phone number: *</label>
 					<input type="text" name="phonenum" id="phonenum" size="10" required="required" pattern="[\d\s]{8,12}">
