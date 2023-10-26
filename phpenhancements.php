@@ -25,7 +25,10 @@
 		<!-- Sorting EOIs -->
 		<section>
 			<h2>Sorting EOIs</h2>
-			<p>Information</p>
+			<p>You can select which column is used to order the query table in the<a href="./manage.php">manage.php</a>page.
+			When searching for the query, you select a header, from a drop down menu, that will order the entire table in relation to that column.
+			A switch/case statement checks the selected option from the drop down and compares it to the name of each column.
+			If they are equal then a query that orders the table by the corresponding column will be used.</p>
 		</section>
 		<!-- Resubmission Checking -->
 		<section>

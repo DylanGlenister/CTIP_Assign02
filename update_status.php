@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Mocha - Update Status</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Melusi Ndebele">
+	<meta name="description" content="The update EOI status page for a fictional tech company called Mocha">
+	<meta name="keywords" content="Swinburne, COS10026, assignment, Mocha, manage, EOI, Quiery, Update">
 	<link rel="stylesheet" href="./styles/styles.css">
-
 </head>
 <body>
     
