@@ -112,8 +112,8 @@
 					<label for="mathematics">Mathematics:</label>
 					<input type="checkbox" name="mathematics" id="mathematics">
 					<br>
-					<label for="work">Other skills:</label>
-					<input type="checkbox" name="work" id="work">
+					<label for="otherskillscb">Other skills:</label>
+					<input type="checkbox" name="otherskillscb" id="otherskillscb">
 					<br>
 					<textarea name="otherskills" id="otherskills" rows="5" cols="40" placeholder="Please type here..."></textarea>
 				</fieldset>

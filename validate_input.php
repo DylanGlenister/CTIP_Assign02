@@ -124,7 +124,7 @@ if (!$conn) {
 	}
 
 	// Other skills
-	if (isset($_POST["work"]) && $otherskills == "")
+	if (isset($_POST["otherskillscb"]) && $otherskills == "")
 	{
 		$errMsg .= "<p>You must list your other skills if the box is checked</p>";
 	}
