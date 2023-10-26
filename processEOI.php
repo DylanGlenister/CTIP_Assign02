@@ -44,10 +44,9 @@
 
 	// Recieves all the form fields
 	include("formfields.php");
-	//include("validate_input.php");
+	include("validate_input.php");
 	include_once("settings.php");
 
-	$errMsg = "";
 
 	if ($errMsg != "") {
 		echo "$errMsg";
