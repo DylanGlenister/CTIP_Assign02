@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Process EOI</title>
-	<meta name="author" content="Dylan Glenister">
+	<title>Mocha - Process EOI</title>
+	<meta name="author" content="Dylan Glenister & Sam Glasser">
 	<meta name="description" content="The processEOI page for mocha">
 	<meta name="keywords" content="Swinburne, COS10026, assignment, Mocha, processEOI">
 	<link rel="stylesheet" href="./styles/styles.css">
@@ -111,7 +111,7 @@
 	}
 	echo "</main>";
 	// FOOTER
-	$author = "Author: Dylan Glenister";
+	$author = "Author: Dylan & Sam";
 	include ("footer.inc");
 ?>
 </body>

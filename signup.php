@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Signup</title>
+	<title>Mocha - Signup</title>
 	<meta name="author" content="Dylan Glenister">
-	<meta name="description" content="the Signup page for a fictional tech company called Mocha">
+	<meta name="description" content="The signup page for a fictional tech company called Mocha">
 	<meta name="keywords" content="Swinburne, COS10026, assignment, Mocha, Signup">
 	<link rel="stylesheet" href="./styles/styles.css">
 </head>

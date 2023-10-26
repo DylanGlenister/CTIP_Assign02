@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login</title>
+	<title>Mocha - Login</title>
 	<meta name="author" content="Dylan Glenister">
 	<meta name="description" content="The login page for managers for a fictional tech company called Mocha">
 	<meta name="keywords" content="Swinburne, COS10026, assignment, Mocha, login">
