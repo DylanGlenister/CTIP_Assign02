@@ -13,30 +13,15 @@ if (!$conn) {
 	echo "<p>Database connection Failure</p>";
 }
 else {
-		$Query = "SELECT * FROM eoi WHERE jobrefnum LIKE '$jobrefnum' AND email LIKE '$email' ";
+	$Query = "SELECT * FROM eoi WHERE jobrefnum LIKE '$jobrefnum' AND email LIKE '$email' ";
 
-	
-		$result = mysqli_query($conn, $Query);
-		if ($result) {
-			echo "<p>exists</p>";
-		}
+	$result = mysqli_query($conn, $Query);
+	if ($result) {
 		if (mysqli_num_rows($result) > 0) {
-			while ($row = mysqli_fetch_assoc($result)) {
-				$jobrefnum_db = $row['jobrefnum'];
-				$email_db = $row['email'];
-			 }
-			 if ($jobrefnum_db && $email_db) {
-				if ($jobrefnum_db == $jobrefnum && $email_db == $email) {
-					$errMsg .= "<p>You have Already Applied for This Position.</p>";
-				} else {
-					echo "No match found!";
-				}
-			}
-		}
-		else {
-			echo "<p>No Result</p>";
+			$errMsg .= "<p>You have Already Applied for This Position.</p>";
 		}
 	}
+}
 
 // Job reference number
 if (!preg_match("/[\w\d]{5}$/", $jobrefnum)) {
