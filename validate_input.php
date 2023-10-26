@@ -1,10 +1,35 @@
 <?php
+
+require_once ("settings.php");
+
+	$conn = mysqli_connect($host,
+	$user,
+	$pwd,
+	$sql_db
+);
+if (!$conn) {
+	echo "<p>Database connection Failure</p>";
+}
+else {
+	$sql_tables="eoi";
+	
+	$Query = "SELECT * FROM applications WHERE jobrefnum LIKE '$jobrefnum' AND email LIKE '$email' ";
+
+	$result = mysqli_query($conn, $Query);
+
+	if (!$result) {
+		echo "<p> You Have Already Applied for This Position";
+	}
+}
+
+
 // Validate all the inputs
 $errMsg = "";
 // Job reference number
 if (!preg_match("/[\w\d]{5}$/", $jobrefnum)) {
 	$errMsg .= "<p>Job reference number must be exactly 5 alphanumeric characters.</p>";
 }
+
 
 // First name
 if ($first_name == "") {
@@ -27,24 +52,25 @@ if ($dob == "") {
 
 // Gender
 if ($gender == "") {
-	$errMsg .= "<p>You must set a gender.</p>";
+	$errMsg .= "<p>Please select an option for gender.</p>";
 }
 
 // Street address
 if ($address == "") {
 	$errMsg .= "<p>You must enter your street address.</p>";
-} else if (!preg_match("/*{1,40}$/", $address)) {
+} else if (!preg_match("/^.{1,40}$/u", $address)) {
 	$errMsg .= "<p>A maximum of 40 characters are allowed in your street address.</p>";
 }
 
 // Suburb/town
 if ($town == "") {
 	$errMsg .= "<p>You must enter your suburb/town.</p>";
-} else if (!preg_match("/*{1,40}$/", $town)) {
+} else if (!preg_match("/^.{1,40}$/u", $address)) {
 	$errMsg .= "<p>A maximum of 40 characters are allowed in your suburb/town.</p>";
 }
 
 // State
+
 
 // Postcode - TODO check if matches state
 if ($postcode == "") {
@@ -52,16 +78,50 @@ if ($postcode == "") {
 } else if (!preg_match("/\d{4}$/", $postcode)) {
 	$errMsg .= "<p>Postcode must be exact 4 digits and match state.</p>";
 }
+$arrpostcode = str_split($postcode);
+$number=$arrpostcode[0];
+switch ($number) {
+	case "0":
+		if ($state != "NT")
+		echo "Postcode does not match State";
+		break;
+	case "2":
+		if ($state != "NSW")
+		echo "Postcode does not match State";
+		break;
+	case "3";
+		if ($state != "VIC")
+		echo "Postcode does not match State";
+		break;
+	case "4";
+		if ($state != "QLD")
+		echo "Postcode does not match State";
+		break;
+	case "5";
+		if ($state != "SA")
+		echo "Postcode does not match State";
+		break;
+	case "6";
+		if ($state != "WA")
+		echo "Postcode does not match State";
+		break;
+	case "7";
+		if ($state != "TAS")
+		echo "Postcode does not match State";
+		break;
+	default:
+		echo "Postcode does not match State";
+}
 
 // Email address
-if ($email) {
+if ($email == "") {
 	$errMsg .= "<p>You must enter your email address.</p>";
-} else if (!preg_match("/$/", $email)) {
+} else if (!preg_match($pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i", $email)) {
 	$errMsg .= "<p>Your email address must be a valid format.</p>";
 }
 
 // Phone number
-if ($phonenum) {
+if ($phonenum == "") {
 	$errMsg .= "<p>You must enter your phone number.</p>";
 } else if (!preg_match("/[\d\s]{8,12}$/", $phonenum)) {
 	$errMsg .= "<p>Your phone number must be between 8 and 12 digits or spaces.</p>";
