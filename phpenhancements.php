@@ -30,6 +30,7 @@
 			A switch/case statement checks the selected option from the drop down and compares it to the name of each column.
 			If they are equal then a query that orders the table by the corresponding column will be used.</p>
 		</section>
+		<br>
 		<!-- Resubmission Checking -->
 		<section>
 			<h2>Resubmission Checking</h2>
@@ -37,7 +38,7 @@
 			<p>The way I chose to do it was to search the MySQL database for the job reference number and the email they submitted
 				and it simply checks to see if anything comes back in the search. If there is something returned then it means there are copies and they are attempting to re-apply
 				for the same position. If there is a match it simply goes into an ErrMsg which tells the user that they have already applied for this position.
-				It is a simple enhancement but it stops people from bombarding the apply page and the database with duplicates. 
+				It is a simple enhancement but it stops people from bombarding the apply page and the database with duplicates.
 			</p>
 		</section>
 	</main>
