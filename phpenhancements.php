@@ -43,7 +43,7 @@
 		</section>
 	</main>
 	<?php
-		$author = "Author: Dylan Glenister";
+		$author = "Author: Dylan, Melusi, Sam";
 		include ("footer.inc");
 		?>
 </body>
